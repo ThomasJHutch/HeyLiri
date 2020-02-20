@@ -1,0 +1,31 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "<!-- <img src=\"assets/images/train.gif\" width=\"100%\"> -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/ThomasJHutch/HeyLiri.git"
+  },
+  "keywords": [],
+  "author": "Tom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasJHutch/HeyLiri/issues"
+  },
+  "homepage": "https://github.com/ThomasJHutch/HeyLiri#readme",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "dotenv": "^6.2.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1",
+    "request": "^2.88.2",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {}
+}
