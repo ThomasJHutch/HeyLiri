@@ -7,39 +7,36 @@ var moment = require("moment");
 
 
 
-// function findConcerts(search) {
-//     console.log("Finding your concerts...");
-//     // default Foo Fighters
-//     if (!search) {
-//         search = "Foo Fighters"
-//     };
+function findConcerts(search) {
+    console.log("Finding your concerts...");
+    // default Foo Fighters
+    if (!search) {
+        search = "Foo Fighters"
+    };
 
-//     var queryURL = "https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp";
+    var queryURL = "https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp";
 
-//     axios({
-//         method: 'get',
-//         url: queryURL
-//     })
-//         .then(function (res) {
-//             console.log("=========NEW SHOW LIST=========\n");
-//             console.log(`Catch ${search} at: \n`);
-//             for (var i = 0; i < res.data.length; i++) {
-//                 var venue = res.data[i].venue.name;
-//                 var location = res.data[i].venue.city + ", " + res.data[i].venue.region;
-//                 var date = moment(res.data[i].datetime).format("MMMM DD, YYYY");
-//                 console.log(`${venue} in ${location} on ${date}`);
-//             }
-//             console.log("\n===============================");
-//         });
-// }
-
-
+    axios({
+        method: 'get',
+        url: queryURL
+    })
+        .then(function (res) {
+            console.log("=========NEW SHOW LIST=========\n");
+            console.log(`Catch ${search} at: \n`);
+            for (var i = 0; i < res.data.length; i++) {
+                var venue = res.data[i].venue.name;
+                var location = res.data[i].venue.city + ", " + res.data[i].venue.region;
+                var date = moment(res.data[i].datetime).format("MMMM DD, YYYY");
+                console.log(`${venue} in ${location} on ${date}`);
+            }
+            console.log("\n===============================");
+        });
+}
 
 
-var Spotify = new Spotify({
-    id: "151d5d3b01e64e4fb359006d8334ece6",
-    secret: "6413ea99ede8407fbcfc7c23c896ed6f"
-});
+
+
+
 var getArtistNames = function (artist) {
     return artist.name;
 }
